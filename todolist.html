@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todo list project</title>
+
+	<style type="text/css">
+
+	body {
+		
+		margin: 0 auto;
+		padding: 0 auto;
+		
+	
+	}
+
+	
+	h1 {
+
+		position: absolute; 
+   top: 0px; 
+   left: 0px; 
+   margin:10px 20px 0px 20px;
+   color: white;
+		
+	}
+
+	#name {
+		/*padding: 0 auto;
+		margin: 0 auto;
+		position: relative;
+		left: 40%;*/
+
+		position: absolute; 
+   top: 50px; 
+   left: 0px; 
+   margin:20px 20px 0px 30px;
+   
+	}
+
+	#namebutton {
+
+position: absolute; 
+   top: 50px; 
+   left: 0px; 
+   margin:20px 20px 0px 275px;
+	}
+
+	#image {
+		position: relative; 
+   width: 50%; /* for IE 6 */
+   /*margin: 0 auto;
+   padding: 0 auto;*/
+   left: 50px;
+   height: 10px;
+   top: 20px;
+  
+
+
+	}
+
+	
+	#welcomeMess {
+
+			position: absolute; 
+   top: 0px; 
+   left: 450px; 
+   margin:10px 200px 0 210px;
+   color: white;
+   width: 600px;
+   font-size: 30px;
+	}
+
+   #goal1{
+
+   	position: absolute; 
+   top: 10px; 
+   left: 80px; 
+   margin:100px 200px 0 650px;
+		
+   }
+
+   #goal2{
+
+   	position: absolute; 
+   top: 100px; 
+   left: 80px; 
+   margin:100px 200px 0 650px;
+		
+   }
+
+   #goal3{
+
+   	position: absolute; 
+   top: 145px; 
+   left: 80px; 
+   margin:145px 200px 0 650px;
+		
+   }
+
+    #reward{
+
+   	position: absolute; 
+   top: 200px; 
+   left: 40px; 
+   margin:200px 200px 0 650px;
+		
+   }
+
+   .goalButton1 {
+
+   		position: absolute; 
+   top: 10px; 
+   left: 60px; 
+   margin:100px 200px 0 900px;
+
+   }
+
+   
+
+
+   .goalButton2 {
+
+   		position: absolute; 
+   top: 100px; 
+   left: 60px; 
+   margin:100px 200px 0 900px;
+
+   }
+
+   .goalButton3 {
+
+   		position: absolute; 
+   top: 145px; 
+   left: 60px; 
+   margin:145px 200px 0 900px;
+
+   }
+	
+	
+		#Date {
+
+	 /*use this to write on notebook!*/
+	position: absolute; 
+   top: 0px; 
+   left: 0;
+   margin:180px 80px 0 200px;
+   color: black;
+
+
+		
+	}
+		
+
+	#goalp1 {
+
+	 /*use this to write on notebook!*/
+	position: absolute; 
+   top: 150px; 
+   left: 200px;
+   margin:200px 200px 0 210px;
+   color: blue;
+
+
+		
+	}
+
+	#goalp2 {
+
+	 /*use this to write on notebook!*/
+	position: absolute; 
+   top: 300px; 
+   left: 0;
+   margin:200px 200px 0 210px;
+   color: blue;
+
+
+		
+	}
+
+	#goalp3 {
+
+	 /*use this to write on notebook!*/
+	position: absolute; 
+   top: 500px; 
+   left: 0;
+   margin:200px 200px 0 210px;
+   color: blue;
+
+
+		
+	}
+
+
+
+	input[type=text] {
+	width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+   	font-weight: bold;
+   	text-align: center;
+
+	}
+
+	button {
+	width: 150px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    /*margin: 8px 0;*/
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+	}
+
+
+	</style>
+</head>
+<body>
+
+
+<div id="image">
+
+
+
+<h1>Hello, please enter your name: </h1>
+<input type="text" id="name" ><button id="namebutton" class="button" onclick="getName();">ENTER!</button>
+
+<img src="Home-3.png">
+
+
+<p id="welcomeMess"></p>
+
+<input type="text" placeholder="Goal # 1" id="goal1">
+
+<button class="goalButton1" id="goalButton1" onclick="addGoal(1);">Add my goal!</button>
+
+<button class ="goalButton1" id="doneButton1" onclick="markDone(1);">DONE!</button>
+
+
+<input type="text" placeholder="Goal # 2" id="goal2">
+
+<button class="goalButton2" id="goalButton2" onclick="addGoal(2);">Add my goal!</button>
+
+<button class ="goalButton2" id="doneButton2" onclick="markDone(2);">DONE!</button>
+
+<input type="text" placeholder="Goal # 3" id="goal3">
+
+<button class="goalButton3" id="goalButton3" onclick="addGoal(3);">Add my goal!</button>
+
+<button class ="goalButton3" id="doneButton3" onclick="markDone(3);">DONE!</button>
+
+	<p id ="Date"></p>
+	<p id = "goalp1">
+	<p id = "goalp2"></p>
+	<p id = "goalp3"></p>
+
+
+	<p id="reward"><iframe width="560" height="315" src="https://www.youtube.com/embed/0pxaHyz_E5w?rel=0" frameborder="0" allowfullscreen></iframe>	</p>
+
+	
+
+</div>
+
+
+
+<script type="text/javascript">
+
+var today = new Date();
+var dd = today.getDate();
+
+var mm = today.getMonth()+1; 
+var yyyy = today.getFullYear();
+if(dd<10) 
+{
+    dd='0'+dd;
+} 
+
+if(mm<10) 
+{
+    mm='0'+mm;
+} 
+
+today = mm+'/'+dd+'/'+yyyy;
+
+console.log(today);
+document.getElementById("Date").innerHTML = "Date: " + today;
+
+document.getElementById("doneButton1").style.display="none";
+document.getElementById("doneButton2").style.display="none";
+document.getElementById("doneButton3").style.display="none";
+
+document.getElementById("reward").style.display="none";
+
+
+
+
+
+function getName () {
+
+	var name = document.getElementById("name").value.toUpperCase();
+
+	document.getElementById("welcomeMess").innerHTML = "Hello " + name + "!" + " List your top 3 goals below: ";
+	// body... 
+}
+
+	
+	
+	
+
+function addGoal(num) {
+
+
+	var names = document.getElementById("name").value
+
+	
+	
+
+	var goalsInput = "goal" + num;
+
+	var goalsButton = "goalButton" + num;
+
+	var goalp = "goalp" + num;
+
+	var done = "doneButton" + num;
+
+	var goalInput = document.getElementById(goalsInput).value
+
+	// Check that name is not blank...
+	if (names=="") {
+
+		alert("Hey there enter your name");
+		return false
+	}
+
+	if (goalInput == "") {
+
+		alert("Please enter a goal!");
+		return false;
+	}
+
+	document.getElementById(goalsInput).innerHTML = goalInput;
+	document.getElementById(goalsInput).style.backgroundColor = "yellow";
+	document.getElementById(goalsInput).style.fontSize = "30px";
+
+	document.getElementById(goalsButton).style.display="none";
+	document.getElementById(done).style.display ="block";
+	document.getElementById(done).style.backgroundColor = "blue";
+	
+	
+	
+}
+
+
+function markDone (num_d) {
+	// body... 
+	var goalsp = "goal" + num_d
+ 	document.getElementById(goalsp).style.backgroundColor = "green";
+	document.getElementById(goalsp).style.fontSize = "30px";
+	document.getElementById(goalsp).style.textDecoration = 'line-through';
+
+	if (num_d == 1) {
+
+		alert("Only two more to go for the reward!!!");
+	}else if (num_d==2) {
+		
+		alert("Way to go!! You're almost done with your goals for " + today);
+	}else if (num_d==3) {
+
+		alert("Way to go! You're reward is below: ");
+
+		document.getElementById("reward").style.display="block";
+
+		}
+}
+
+
+
+
+
+</script>
+</body>
+</html>
